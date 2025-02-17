@@ -265,8 +265,16 @@ blockquote {
 
 code,
 pre {
-  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal,
-    Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+  font-family:
+    Monaco,
+    Bitstream Vera Sans Mono,
+    Lucida Console,
+    Terminal,
+    Consolas,
+    Liberation Mono,
+    DejaVu Sans Mono,
+    Courier New,
+    monospace;
   color: #333;
 }
 
@@ -553,8 +561,11 @@ ul.ul-edu li .description p.institution {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .btn {
@@ -1231,16 +1242,18 @@ button {
 }
 @media screen and (max-width: 700px) {
   html {
-    background-image: radial-gradient(
-        circle at left top,
-        white 0%,
-        white 20%,
-        transparent 70%
-      ),
+    background-image:
+      radial-gradient(circle at left top, white 0%, white 20%, transparent 70%),
       radial-gradient(circle at right, white 0%, white 5%, transparent 45%),
       linear-gradient(180deg, #d1d9e2, #a7b3bf);
-    background-size: 25em 25em, 30em 30em, 100% 100%;
-    background-position: 0 0, 100% 65%, 0 0;
+    background-size:
+      25em 25em,
+      30em 30em,
+      100% 100%;
+    background-position:
+      0 0,
+      100% 65%,
+      0 0;
   }
 }
 @media print {
