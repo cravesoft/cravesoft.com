@@ -1348,6 +1348,11 @@ button {
   overflow: hidden;
   max-width: 100%;
   margin: 0 auto;
+  pointer-events: none;
+}
+
+.responsive-video .lightbox {
+  pointer-events: auto;
 }
 
 .responsive-video iframe {
