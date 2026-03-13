@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cravesoft.com/sitemap.xml
