@@ -97,19 +97,15 @@
     color: #fff;
   }
 
-  /* Custom semantic elements (will be replaced with spans later) */
-  autocolor,
   .autocolor {
     color: #888;
   }
 
-  lightonly,
   .lightonly {
     display: none !important;
     visibility: hidden !important;
   }
 
-  darkonly,
   .darkonly {
     display: inline !important;
     visibility: visible !important;

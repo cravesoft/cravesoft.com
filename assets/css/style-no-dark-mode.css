@@ -82,7 +82,7 @@
   background-color: #000;
 }
 
-email {
+.email {
   font-size: 14px;
   font-family: "Ubuntu Mono";
 }
@@ -126,24 +126,24 @@ email {
   color: white;
 }
 
-autocolor {
+.autocolor {
   color: #595959;
 }
 
-lightonly {
+.lightonly {
   visibility: visible;
 }
 
-darkonly {
+.darkonly {
   visibility: hidden;
 }
 
-education {
+.education {
   font-weight: 500;
   font-size: 115%;
 }
 
-papertitle {
+.papertitle {
   font-weight: 600;
   font-size: 100%;
 }
