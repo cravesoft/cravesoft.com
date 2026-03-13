@@ -151,6 +151,19 @@
     background-color: #2a4a7a;
   }
 
+  /* Project filter buttons */
+  .filter-btn {
+    border-color: #7eb3f5;
+    color: #7eb3f5;
+    background: transparent;
+  }
+
+  .filter-btn:hover,
+  .filter-btn.active {
+    background-color: #7eb3f5;
+    color: #1a1a2e;
+  }
+
   /* Education icons */
   ul.ul-edu li .description p.institution {
     color: rgba(255, 255, 255, 0.5);

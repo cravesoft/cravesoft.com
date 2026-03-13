@@ -1303,6 +1303,29 @@ button {
   }
 }
 
+#project-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.filter-btn {
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 1rem;
+  border: 1px solid #1565c0;
+  background: transparent;
+  color: #1565c0;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #1565c0;
+  color: #fff;
+}
+
 .lightbox {
   display: none;
   position: fixed;

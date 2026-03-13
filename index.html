@@ -172,9 +172,18 @@
 
         <h2 id="projects" style="margin: 2px 0px -15px">Projects</h2>
 
+        <div id="project-filter" style="margin: 26px 0 10px;">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="C++">C++</button>
+          <button class="filter-btn" data-filter="C">C</button>
+          <button class="filter-btn" data-filter="JavaScript">JavaScript</button>
+          <button class="filter-btn" data-filter="Python">Python</button>
+          <button class="filter-btn" data-filter="Shell">Shell</button>
+        </div>
+
         <div class="publications">
           <ol class="bibliography">
-            <li>
+            <li data-lang="C++">
               <div class="pub-row">
                 <div
                   class="col-sm-3 abbr"
@@ -238,7 +247,7 @@
 
             <br />
 
-            <li>
+            <li data-lang="C">
               <div class="pub-row">
                 <div
                   class="col-sm-3 abbr"
@@ -302,7 +311,7 @@
 
             <br />
 
-            <li>
+            <li data-lang="JavaScript">
               <div class="pub-row">
                 <div
                   class="col-sm-3 abbr"
@@ -365,7 +374,7 @@
 
             <br />
 
-            <li>
+            <li data-lang="Python">
               <div class="pub-row">
                 <div
                   class="col-sm-3 abbr"
@@ -422,7 +431,7 @@
 
             <br />
 
-            <li>
+            <li data-lang="JavaScript">
               <div class="pub-row">
                 <div
                   class="col-sm-3 abbr"
@@ -480,7 +489,7 @@
 
             <br />
 
-            <li>
+            <li data-lang="JavaScript">
               <div class="pub-row">
                 <div
                   class="col-sm-3 abbr"
@@ -538,7 +547,7 @@
 
             <br />
 
-            <li>
+            <li data-lang="C++">
               <div class="pub-row">
                 <div
                   class="col-sm-3 abbr"
@@ -596,7 +605,7 @@
 
             <br />
 
-            <li>
+            <li data-lang="JavaScript">
               <div class="pub-row">
                 <div
                   class="col-sm-3 abbr"
@@ -658,7 +667,7 @@
 
             <br />
 
-            <li>
+            <li data-lang="C++">
               <div class="pub-row">
                 <div
                   class="col-sm-3 abbr"
@@ -705,7 +714,7 @@
 
             <br />
 
-            <li>
+            <li data-lang="Shell">
               <div class="pub-row">
                 <div
                   class="col-sm-3 abbr"
@@ -754,7 +763,7 @@
 
             <br />
 
-            <li>
+            <li data-lang="C++">
               <div class="pub-row">
                 <div
                   class="col-sm-3 abbr"
@@ -812,7 +821,7 @@
 
             <br />
 
-            <li>
+            <li data-lang="JavaScript">
               <div class="pub-row">
                 <div
                   class="col-sm-3 abbr"
@@ -1889,6 +1898,31 @@
     </div>
 
     <script src="./assets/js/lightbox.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var filterBtns = document.querySelectorAll(".filter-btn");
+        var projectItems = document.querySelectorAll(
+          "#project-filter ~ .publications li[data-lang]"
+        );
+        filterBtns.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            filterBtns.forEach(function (b) {
+              b.classList.remove("active");
+            });
+            btn.classList.add("active");
+            var filter = btn.dataset.filter;
+            projectItems.forEach(function (item) {
+              var visible = filter === "all" || item.dataset.lang === filter;
+              item.style.display = visible ? "" : "none";
+              var br = item.nextElementSibling;
+              if (br && br.tagName === "BR") {
+                br.style.display = visible ? "" : "none";
+              }
+            });
+          });
+        });
+      });
+    </script>
     <script src="./assets/js/scale.fix.js"></script>
 
     <!-- Google tag (gtag.js) -->
