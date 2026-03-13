@@ -1,0 +1,180 @@
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background-color: #1a1a2e;
+    color: #d0d0d0;
+  }
+
+  /* Desktop background */
+  @media screen and (min-width: 700px) {
+    html {
+      background-color: #1a1a2e;
+    }
+  }
+
+  /* Mobile radial gradient background override */
+  @media screen and (max-width: 700px) {
+    html {
+      background-image:
+        radial-gradient(circle at left top, #1e2a3a 0%, #1e2a3a 20%, transparent 70%),
+        radial-gradient(circle at right, #1a1a2e 0%, #1a1a2e 5%, transparent 45%),
+        linear-gradient(180deg, #1e2a3a, #131320);
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #7eb3f5;
+  }
+
+  a {
+    color: #7eb3f5;
+  }
+
+  a:hover {
+    color: #afd3fc;
+  }
+
+  a small,
+  a:hover small {
+    color: #888;
+  }
+
+  strong {
+    color: #e0e0e0;
+  }
+
+  hr {
+    background: #333;
+  }
+
+  blockquote {
+    border-left-color: #444;
+    background: #22223a;
+  }
+
+  code,
+  pre {
+    color: #d0d0d0;
+  }
+
+  pre {
+    background: #22223a;
+    border-color: #333;
+  }
+
+  th,
+  td {
+    border-bottom-color: #333;
+  }
+
+  dt {
+    color: #ccc;
+  }
+
+  th {
+    color: #ccc;
+  }
+
+  /* Section border on tablet */
+  @media screen and (max-width: 960px) {
+    section {
+      border-color: #333;
+    }
+  }
+
+  /* Header / sidebar */
+  .social-icons a {
+    color: #7eb3f5 !important;
+  }
+
+  .social-icons a:hover {
+    background-color: #2a2a4a;
+    color: #fff;
+  }
+
+  /* Custom semantic elements (will be replaced with spans later) */
+  autocolor,
+  .autocolor {
+    color: #888;
+  }
+
+  lightonly,
+  .lightonly {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  darkonly,
+  .darkonly {
+    display: inline !important;
+    visibility: visible !important;
+  }
+
+  /* Timeline */
+  ul.timeline-items {
+    border-left-color: #7eb3f5;
+  }
+
+  li.timeline-item h3::before {
+    background-color: #7eb3f5;
+    box-shadow: inset -1000px -1000px #7eb3f5;
+  }
+
+  /* Publication / project cards */
+  .publications ol.bibliography li .links a.btn {
+    color: #d0d0d0;
+    border-color: #d0d0d0;
+  }
+
+  .btn-outline-primary {
+    color: #7eb3f5;
+    border-color: #7eb3f5;
+  }
+
+  .btn-outline-primary:hover {
+    color: #1a1a2e;
+    background-color: #7eb3f5;
+    border-color: #7eb3f5;
+  }
+
+  .btn-outline-primary:focus,
+  .btn-outline-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(126, 179, 245, 0.5);
+  }
+
+  .badge {
+    background-color: #2a4a7a;
+  }
+
+  /* Education icons */
+  ul.ul-edu li .description p.institution {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* Print: keep light background */
+  @media print {
+    html,
+    body {
+      background-color: white;
+      color: #444;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #043361;
+    }
+
+    a {
+      color: #39c;
+    }
+  }
+}
